@@ -7,6 +7,126 @@
 </head>
 
 <body>
+	<style>
+	 body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    .form-container {
+      width: 500px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    .gender-group label {
+      font-weight: normal;
+      display: inline-block;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Car Insurance Registration</h2>
+
+    <form method="POST">
+
+      <!-- Name -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Gender -->
+      <label>Gender:</label>
+      <div class="gender-group">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label>
+      </div>
+
+      <!-- Car Brands -->
+      <label for="cars">Car Brands:</label>
+      <select id="cars" name="cars">
+        <option value="">-- Select a Brand --</option>
+        <option value="bmw">BMW</option>
+        <option value="audi">Audi</option>
+        <option value="mercedez">Mercedez</option>
+      </select>
+
+      <!-- Car Age -->
+      <label for="carage">Car Age:</label>
+      <input type="number" id="carage" name="carage" required>
+
+      <!-- Date of Purchase -->
+      <label for="dop">Date of Purchase:</label>
+      <input type="date" id="dop" name="dop" required>
+
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+
+    </form>
+  </div>
+
+</body>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
